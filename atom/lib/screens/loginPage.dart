@@ -40,6 +40,18 @@ class loginPage extends StatelessWidget {
                       children: [
                         eMailField(),
                         passwordField(),
+                        GestureDetector(
+                          onTap: () {},
+                          child: Container(
+                            width: 200,
+                            height: 35,
+                            decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.all(Radius.circular(50)),
+                              color: Colors.blue
+                            ),
+                            child: const Center( child: Text("Register", style: TextStyle(fontSize: 20, color: Colors.white),),),
+                          ),
+                        ),
                         TextButton(
                           onPressed: () {},
                           child: const Text("Already have an accout? Sign in."),
