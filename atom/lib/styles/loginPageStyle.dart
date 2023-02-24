@@ -11,11 +11,11 @@ LinearGradient ScaffoldColor = LinearGradient(
 
 Widget eMailField(){
   return Container(
-    padding: EdgeInsets.all(30),
+    padding:  EdgeInsets.only(top: 10, right: 20, bottom: 10),
     child: TextField(
       decoration: InputDecoration(
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(50)),
-        labelText: "E-mail",
+        labelText: "    E-mail",
         hintText: "example@thinkdigital.com",
       ),
     ),
@@ -24,12 +24,12 @@ Widget eMailField(){
 
 Widget passwordField(){
   return Container(
-    padding: EdgeInsets.all(30),
+    padding: EdgeInsets.only(top: 10, right: 20),
     child: TextField(
       obscureText: true,
       decoration: InputDecoration(
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(50)),
-        labelText: "password",
+        labelText: "   Password",
       ),
     ),
   );

@@ -19,47 +19,72 @@ class loginPage extends StatelessWidget {
               child: Column(
                 children: [
                   SizedBox(
-                    height: _mediaQuery.size.height * 0.35,
+                    height: _mediaQuery.size.height * 0.45,
                     child: const Center(
                       child: CircleAvatar(
                           backgroundImage: AssetImage(
                             "assets/TD-Logo.jpg",
                           ),
-                          radius: 70),
+                          radius: 90),
                     ),
                   ),
                   Container(
-                    height: _mediaQuery.size.height * 0.65,
+                    padding: EdgeInsets.all(10),
+                    height: _mediaQuery.size.height * 0.55,
                     decoration: const BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(100),
-                            topRight: Radius.circular(100))),
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(50),
+                        topRight: Radius.circular(50),
+                      ),
+                    ),
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        eMailField(),
-                        passwordField(),
-                        GestureDetector(
-                          onTap: () {},
-                          child: Container(
-                            width: 200,
-                            height: 35,
-                            decoration: const BoxDecoration(
-                              borderRadius: BorderRadius.all(Radius.circular(50)),
-                              color: Colors.blue
-                            ),
-                            child: const Center( child: Text("Register", style: TextStyle(fontSize: 20, color: Colors.white),),),
+                        Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              eMailField(),
+                              passwordField(),
+                              TextButton(onPressed: () {}, child: const Text("Forgot Password?",)),
+                            ],
                           ),
                         ),
-                        TextButton(
-                          onPressed: () {},
-                          child: const Text("Already have an accout? Sign in."),
-                        ),
-                        SignInButton(
-                          Buttons.Google,
-                          text: "Sign up with Google",
-                          onPressed: () {},
+                        Padding(
+                          padding: const EdgeInsets.only(top: 30.0),
+                          child: Column(
+                            children: [
+                              GestureDetector(
+                                onTap: () {},
+                                child: Container(
+                                  width: 200,
+                                  height: 35,
+                                  decoration: const BoxDecoration(
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(50)),
+                                      color: Colors.blue),
+                                  child: const Center(
+                                    child: Text(
+                                      "Register",
+                                      style: TextStyle(
+                                          fontSize: 20, color: Colors.white),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              TextButton(
+                                onPressed: () {},
+                                child: const Text("Already have an accout? Sign in."),
+                              ),
+                              SignInButton(
+                                Buttons.Google,
+                                text: "Sign up with Google",
+                                onPressed: () {},
+                              )
+                            ],
+                          ),
                         )
                       ],
                     ),
